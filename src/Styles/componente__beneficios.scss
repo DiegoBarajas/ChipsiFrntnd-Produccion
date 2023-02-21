@@ -1,0 +1,71 @@
+@import './var.scss';
+
+.reparar__beneficios {
+    @extend %col;
+    @extend %rowGap1;
+
+    #clean {
+        display: none;
+    }
+
+    &-items {
+        @extend %rowBetween;
+        @extend %shadow;
+        @extend %border__radius;
+        @extend %transition;
+        @extend %colGap1;
+        background-color: $general-white;
+        user-select: none;
+        padding: clamp(0.5rem, 1vw, 1rem) 0px;
+
+        &-item {
+            @extend %colCenter;
+            padding: 0.5rem;
+            row-gap: 0.5rem;
+            width: 100%;
+            flex-grow: 1;
+
+            img {
+                height: clamp(1rem, 2vw, 2rem);
+            }
+
+            p {
+                @extend %p07;
+                text-align: center;
+
+                span {
+                    color: $green-400;
+                }
+            }
+        }
+    }
+
+    &-items:hover {
+        @extend %shadowHover;
+    }
+
+    &-device {
+        @extend %colCenter;
+        @extend %border__radius;
+        @extend %shadow;
+        @extend %rowGap1;
+        @extend %transition;
+        padding: 2rem 1rem;
+        width: 100%;
+        background-color: $general-white;
+
+        img {
+            width: clamp(2rem, 3vw, 3rem);
+        }
+
+        p {
+            @extend %p09;
+            text-align: center;
+            font-weight: 300;
+        }
+    }
+
+    &-device:hover {
+        @extend %shadowHover;
+    }
+}

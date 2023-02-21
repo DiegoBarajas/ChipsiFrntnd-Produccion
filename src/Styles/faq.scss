@@ -1,0 +1,104 @@
+@import "./var.scss";
+
+.faq__h2 {
+    @extend %tittle2;
+    @extend %marginTop5;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+        color: $green-300;
+        font-weight: 900;
+    }
+}
+
+.faq {
+    @extend %col;
+    row-gap: clamp(1.5rem, 3vw, 3rem);
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+
+    .img__fondo__faq {
+        height: 100%;
+        width: 3px;
+        z-index: -99;
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        object-fit: cover;
+    }
+
+    a {
+        color: $green-300;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    &__q {
+        @extend %col;
+        @extend %border__radius;
+        background-color: $general-white;
+        padding: clamp(0.8rem, 2vw, 1.5rem) clamp(0.8rem, 1vw, 1rem);
+
+        &-tittle {
+            @extend %rowAlignCenter;
+            column-gap: 0.7rem;
+            user-select: none;
+
+            img {
+                transition: cubic-bezier(.34,-0.61,.32,1.61) 0.4s all;
+                height: clamp(0.3rem, 0.5vw, 0.4rem);
+            }
+
+            h3 {
+                @extend %p09;
+                text-align: start;
+                font-weight: 400;
+                
+            }
+        }
+
+        &-text {
+            @extend %transition2;
+            display: none;
+            margin-top: 1rem;
+            border-top: 1px solid #E9EAE9;
+
+            p,
+            ul,
+            ol {
+                @extend %p08;
+                text-align: start;
+                font-weight: 300;
+                margin-bottom: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            ul,
+            ol {
+                padding-left: 1.5rem;
+
+                li {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+
+        input {
+            display: none;
+        }
+        input:checked + &-tittle img{
+            transform: rotate(-180deg);
+        }
+
+        input:checked ~ &-text {
+            display: block;
+        }
+    }
+
+    h2 {
+        @extend %tittle;
+        text-transform: uppercase;
+    }
+}

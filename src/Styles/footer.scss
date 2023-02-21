@@ -1,0 +1,63 @@
+@import "./var.scss";
+
+.footer {
+    @extend %col;
+    @extend %marginTop5;
+    width: 100vw;
+    background-color: $general-white;
+    margin-left: clamp(-9rem, -9vw, 1rem);
+    padding: 2rem clamp(1rem, 9vw, 9rem);
+
+    &__top {
+        @extend %rowBetween;
+
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 1px solid #E9EAE9;
+        padding-bottom: 2rem;
+
+        &-logo {
+            height: 3.5rem;
+        }
+
+        &-redes {
+            @extend %rowAlignCenter;
+            column-gap: 2rem;
+
+            a {
+                text-decoration: none;
+
+                img {
+                    height: 1.5rem;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        @extend %rowBetween;
+        @extend %gap1;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+
+        a {
+            text-decoration: none;
+            @extend %p07;
+        }
+
+    }
+
+    &__mark {
+        font-size: clamp(0.5rem, 1vw, 0.8rem);
+        font-weight: 300;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__bottom {
+        flex-direction: column;
+    }
+}

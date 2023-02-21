@@ -1,0 +1,35 @@
+@import "./var.scss";
+
+.componente__reparar__buscador {
+    @extend %marginTop1;
+    @extend %row;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+
+    input {
+        @extend %shadow;
+        @extend %border__radius;
+        @extend %p09;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: block;
+        padding: clamp(0.5rem, 1vw, 1rem);
+        width: 100%;
+    }
+
+    button {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0.7rem clamp(0.5rem, 1vw, 1rem) 0.5rem 0.5rem;
+
+        img {
+            height: clamp(1rem, 1.7vw, 1.7rem);
+        }
+    }
+}

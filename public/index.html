@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"
+    />
+    <meta name="theme-color" content="#F9FCFB" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#F9FCFB"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#2e413c"
+    />
+    <meta
+      name="description"
+      content="Reduce a 0 el riesgo de comprar, vender y reparar!"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- CSS only -->
+
+    <title>Chipsi</title>
+  </head>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    window.addEventListener("resize", () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+  </script>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

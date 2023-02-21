@@ -1,0 +1,140 @@
+@import "./var.scss";
+
+.repair__brand {
+    width: 100%;
+    max-height: $general-vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    row-gap: 2rem;
+
+    &-search {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        column-gap: 1rem;
+        background-color: $green-100;
+        align-items: center;
+        border-radius: 99999px;
+        padding-right: 1.2rem;
+
+        &-input {
+            background-color: $green-100;
+            width: 100%;
+            border: none;
+            padding: 0.8rem 1.2rem;
+            outline: none;
+            color: $general-text;
+            border-radius: 99999px;
+        }
+
+        &-img {
+            height: 0.8rem;
+        }
+    }
+
+    &__items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        padding-bottom: 13rem;
+
+        &-item {
+            background-color: $general-white;
+            @extend %border__radius;
+            @extend %shadow;
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.2rem;
+            padding: 1rem;
+            width: 25%;
+            min-width: 80px;
+            max-width: 250px;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+
+            &-img {
+                object-fit: cover;
+                object-position: center;
+            }
+
+            &-p {
+                font-size: 0.8rem;
+                font-weight: 300;
+            }
+
+            &-circle {
+                height: clamp(1.5rem, 2vw, 2rem);
+            }
+
+            &-large {
+                width: 100%;
+                max-width: 4rem;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: $general-white;
+        padding: 1.5rem clamp(0.5rem, 8vw, 8rem);
+        @extend %border__radius;
+        @extend %shadow__invert;
+        align-items: center;
+        row-gap: 1rem;
+        width: 100%;
+
+        &-tip {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 0.2rem;
+
+            &-tittle {
+                display: flex;
+                flex-direction: row;
+                column-gap: 0.2rem;
+                align-items: center;
+    
+                &-img {
+                    height: 1.1rem;
+                }
+    
+                &-span {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    color: $green-300;
+                }
+            }
+    
+            &-span {
+                font-size: 0.8rem;
+                font-weight: 300;
+                opacity: 0.8;
+                text-align: center;
+            }
+        }
+
+        &-button {
+            text-decoration: none;
+            color: $general-white;
+            background-color: $green-300;
+            width: 100%;
+            border-radius: 9999px;
+            padding: 0.8rem 1.6rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+            @extend %shadowButton;
+        }
+    }
+}

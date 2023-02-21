@@ -1,0 +1,149 @@
+@import "./var.scss";
+
+.repair__device__found {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    row-gap: 2rem;
+    height: 100%;
+
+    &__fondo {
+        position: absolute;
+        user-select: none;
+        width: 100vw;
+        right: -35vw;
+        top: -35vw;
+        z-index: -999999;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-arrow {
+            height: clamp(1rem, 2vw, 2rem);
+
+            &-img {
+                height: 100%;
+            }
+        }
+
+        &-location {
+            display: flex;
+            flex-direction: row;
+            column-gap: 0.5rem;
+            align-items: center;
+            text-decoration: none;
+            max-width: 70%;
+
+            &-img {
+                height: clamp(0.8rem, 1.5vw, 1.5rem);
+            }
+
+            &-span {
+                font-size: 1rem;
+                font-weight: 400;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            &-button {
+                height: clamp(0.8rem, 1.5vw, 1.5rem);
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        height: 100%;
+
+        &-status {
+            display: flex;
+            flex-direction: row;
+            background-color: $green-transparent;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            align-items: center;
+            column-gap: 0.7rem;
+
+            img {
+                height: 1.2rem;
+            }
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+
+                &-p {
+                    font-size: 0.9rem;
+                    color: $green-300;
+                    font-weight: 700;
+                }
+
+                &-span {
+                    font-size: 0.8rem;
+                    color: $green-300;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &-device {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-img {
+                margin-bottom: 1rem;
+                height: 12rem;
+            }
+
+            &-p {
+                text-align: center;
+                font-size: 0.8rem;
+                font-weight: 300;
+            }
+
+            &-h3 {
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            margin-top: auto;
+            padding-bottom: 2rem;
+
+            &-button {
+                width: 100%;
+                border-radius: 999px;
+                padding: 1rem 2rem;
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            &-button:first-child {
+                background-color: $green-transparent;
+                color: $green-300;
+            }
+
+            &-button:last-child {
+                background-color: $green-300;
+                color: $general-white;
+                @extend %shadowButton;
+            }
+        }
+    }
+}

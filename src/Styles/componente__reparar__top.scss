@@ -1,0 +1,70 @@
+@import "./var.scss";
+
+.reparar__top {
+    @extend %col;
+    @extend %rowGap1;
+    user-select: none;
+
+    &-bar {
+        @extend %rowBetween;
+        align-items: center;
+
+        &-flechita {
+            height: clamp(1.5rem, 2vw, 2rem);
+
+            img {
+                height: 100%;
+            }
+        }
+
+        &-flechita:last-child {
+            transform: rotate(0.50turn);
+        }
+
+        #si {
+            opacity: 0.4;
+            cursor: auto;
+        }
+
+        &-progress {
+            @extend %rowBetween;
+            width: 60%;
+            max-width: 20rem;
+            column-gap: 5%;
+            a {
+                height: clamp(0.7rem, 1vw, 1rem);
+                width: 20%;
+                background-color: $green-100;
+                border-radius: 100px; 
+            }
+
+            .current {
+                background-color: $green-400;
+                width: 40%;
+            }
+
+            .complete {
+                background-color: $green-200;
+            }
+
+            .clean {
+                display: none;
+            }
+        }
+    }
+
+    &-tittle {
+        h2 {
+            @extend %tittle;
+        }
+
+        p {
+            @extend %p09;
+            opacity: 0.8;
+        }
+    }
+
+    #tittleClean {
+        display: none;
+    }
+}

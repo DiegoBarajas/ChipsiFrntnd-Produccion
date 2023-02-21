@@ -1,0 +1,197 @@
+@import "./var.scss";
+
+.nav {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+
+    &__logo {
+        height: clamp(1.5rem, 3vw, 3rem);
+
+        &-img {
+            height: 100%;
+        }
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__input:checked ~ &__menu__container {
+        transform: translateX(0px);
+        box-shadow: -9px 2px 400px 30px rgba(0,0,0,0.1);
+    }
+
+    &__menu__container {
+        position: fixed;
+        width: 80%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        background-color: #F9FCFB;
+        padding: 3rem 2rem;
+        z-index: 99999;
+        height: calc($general-vh + 1rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+        top: -1rem;
+        right: 0;
+        transform: translateX(100%);
+        @extend %transition;
+
+        &-close {
+            width: 100%;
+            height: clamp(2rem, 3vw, 3rem);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &-img {
+                height: 100%;
+                height: clamp(1.1rem, 2vw, 2rem);
+            }
+        }
+
+        &-background {
+            position: absolute;
+            top: -2rem;
+            right: -5rem;
+            width: 100%;
+            z-index: -1;
+        }
+
+        &-user {
+            padding: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            width: 100%;
+
+            &-location {
+                display: flex;
+                flex-direction: row;
+                column-gap: 0.5rem;
+                text-decoration: none;
+                width: 100%;
+
+                &-img {
+                    height: 1rem;
+                }
+
+                &-p {
+                    font-size: 0.8rem;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                &-button {
+                    height: 0.8rem;
+                    margin-left: auto;
+                }
+            }
+
+            &-name {
+                display: flex;
+                flex-direction: row;
+                column-gap: 0.5rem;
+                align-items: center;
+
+                &-img {
+                     height: 2rem;
+                }
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    &-span {
+                        font-size: 0.7rem;
+                        font-weight: 300;
+                        opacity: 0.8;
+                    }
+
+                    &-name {
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            &-buttons {
+                display: flex;
+                flex-direction: row;
+                column-gap: 1rem;
+                
+                &-button {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1rem;
+                    @extend %shadow;
+                    @extend %border__radius;
+                    width: 50%;
+                    row-gap: 0.3rem;
+                    flex-grow: 1;
+                    align-items: center;
+                    background-color: $general-white;
+                    text-decoration: none;
+
+                    &-img {
+                        height: 1.2rem;
+                    }
+
+                    &-span {
+                        font-size: 0.6rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            row-gap: 1rem;
+
+            &-button {
+                display: flex;
+                flex-direction: row;
+                column-gap: 0.5rem;
+                @extend %shadow;
+                @extend %border__radius;
+                background-color: $general-white;
+                text-decoration: none;
+                padding: 0.8rem 1rem;
+                align-items: center;
+
+                &-img {
+                    height: 0.8rem;
+                }
+
+                &-span {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    color: inherit;
+                }
+            }
+
+            &-button:last-child {
+                margin-top: 2rem;
+                color: $red !important;
+            }
+        }
+
+    }
+
+    &__button {
+        height: clamp(1.2rem, 2vw, 2rem);
+
+        &-img {
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,441 @@
+@import "./var.scss";
+
+.reparar__confirmar {
+    user-select: none;
+    padding-bottom: 2rem;
+
+    &__top {
+        @extend %rowAlignCenter;
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        h3 {
+            @extend %tittle3;
+            width: 100%;
+            text-align: center;
+            padding-right: 1rem;
+        }
+
+        a {
+            height: clamp(1.5rem, 2vw, 2rem);
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    section {
+        @extend %shadow;
+        @extend %border__radius;
+        @extend %marginTop1;
+        background-color: $general-white;
+        padding: 1rem;
+        max-width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__ubicacion {
+        @extend %col;
+        @extend %rowGap1;
+        
+
+        &__top {
+            @extend %rowBetween;
+            @extend %colGap1;
+            width: 100%;
+            align-items: center;
+            text-decoration: none;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba($color: #232a28, $alpha: 0.1);
+
+            &-personal {
+                @extend %col;
+                width: 90%;
+
+
+                &-calle {
+                    @extend %rowAlignCenter;
+                    column-gap: 0.5rem;
+
+                    span:first-child {
+                        @extend %rowCenter;
+                        @extend %border__radius;
+                        @extend %p07;
+                        font-weight: 400;
+                        padding: 0.5rem;
+                        background-color: #DDF7F0;
+                        color: $green-400;
+                        height: max-content;
+                    }
+
+                    span:last-child {
+                        @extend %tittle3;
+                        text-align: start;
+                        display: inline;
+                        font-weight: 400;
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                &-num {
+                    width: 100%;
+
+                    span {
+                        @extend %p09;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            &-button {
+                img {
+                    height: clamp(1rem, 1.6vw, 1.6rem);
+                }
+            }
+        }
+
+        &__bottom {
+            @extend %rowBetween;
+            align-items: center;
+
+            &-tiempo {
+                @extend %rowAlignCenter;
+                column-gap: 0.3rem;
+
+                img {
+                    height: clamp(1rem, 1.6vw, 1.6rem);
+                    margin-top: 0.1rem;
+                }
+
+                span {
+                    @extend %p09;
+                    font-weight: 300;
+                }
+            }
+
+            &-cantidad {
+                span {
+                    @extend %tittle3;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &__metodo {
+        @extend %rowBetween;
+        @extend %colGap1;
+        align-items: center;
+
+        span {
+            @extend %p09;
+            font-weight: 300;
+        }
+
+        a {
+            @extend %rowAlignCenter;
+            column-gap: 0.3rem;
+            text-decoration: none;
+
+            img {
+                height: clamp(1rem, 1.6vw, 1.6rem);
+            }
+
+            p {
+                @extend %tittle3;
+                font-weight: 400;
+                margin-right: 0.5rem;
+            }
+
+        }
+    }
+
+    &__cupones {
+        @extend %col;
+        @extend %rowGap1;
+        align-items: flex-start;
+        position: relative;
+
+        h3 {
+            @extend %tittle3;
+            font-weight: 500;
+        }
+
+        .shitpopo {
+            position: absolute;
+            top: -0.7rem;
+            right: -0.7rem;
+            height: 2rem;
+        }
+
+        input {
+            display: none;
+        }
+
+        form {
+            @extend %col;
+            @extend %rowGap1;
+            width: 100%
+        }
+
+        &-cupon {
+            @extend %border__radius;
+            @extend %col;
+            @extend %colGap1;
+            padding: 1rem;
+            position: relative;
+            width: 100%;
+            background: rgba(140, 230, 205, 0.3);
+            border: 0.3px solid #14CC98;
+
+            span:first-child {
+                @extend %tittle2;
+                text-align: start;
+                color: $green-400;
+            }
+
+            span:last-child {
+                @extend %p09;
+                font-weight: 300;
+                color: $green-400;
+            }
+
+            &-circle {
+                @extend %transition;
+                @extend %rowCenter;
+                align-items: center;
+                position: absolute;
+                height: 1.5rem;
+                width: 1.5rem;
+                background-color: $general-white;
+                border-radius: 999px;
+                border: 0.3px solid #14CC98;
+                top: calc(50% - 0.75rem);
+                right: 1rem;
+
+                img {
+                    height: 0.7rem;
+                }
+            }
+
+        }
+
+        input:checked+&-cupon div {
+            background-color: $green-400;
+            animation: botonchecked 0.4s ease-in-out;
+        }
+
+        @keyframes botonchecked {
+            30% {
+                transform: scale(1.1);
+            }
+
+            60% {
+                transform: scale(0.80);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__remplazo {
+        @extend %col;
+        @extend %rowGap1;
+
+        h3 {
+            @extend %tittle3;
+            @extend %row;
+            align-items: baseline;
+            column-gap: 0.4rem;
+            font-weight: 500;
+            text-align: start;
+
+            a {
+                display: block;
+                margin: auto 0px;
+                height: clamp(1rem, 1.6vw, 1.6rem);
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+        &-button {
+            @extend %rowBetween;
+            align-items: center;
+
+            &-span {
+                @extend %p09;
+                font-weight: 300;
+            }
+
+            input {
+                display: none;
+            }
+
+            label {
+                @extend %rowAlignCenter;
+                position: relative;
+                width: 2.5rem;
+                height: 1.5rem;
+                background-color: $green-100;
+                border-radius: 999px;
+
+                span {
+                    @extend %shadow;
+                    @extend %transition;
+                    left: -0.2rem;
+                    position: absolute;
+                    display: block;
+                    height: 1.6rem;
+                    background-color: $general-white;
+                    width: 1.6rem;
+                    border-radius: 999px;
+                }
+            }
+
+            input:checked~label span {
+                @extend %shadowButton;
+                transform: translateX(80%);
+                background-color: $green-300;
+
+            }
+        }
+    }
+
+    &__precio {
+        @extend %col;
+        @extend %rowGap1;
+
+        h3 {
+            @extend %tittle3;
+            font-weight: 500;
+            text-align: start;
+        }
+
+        &-reparacion {
+            @extend %rowBetween;
+            @extend %colGap1;
+            align-items: center;
+
+            &-img {
+                @extend %rowAlignCenter;
+                column-gap: 0.5rem;
+
+                p {
+                    @extend %p08;
+                    font-weight: 400;
+                }
+
+                img {
+                    height: clamp(3rem, 4vw, 4rem);
+                }
+            }
+
+            span {
+                @extend %tittle2;
+                font-weight: 500;
+                width: max-content;
+                white-space: nowrap;
+            }
+        }
+
+        &-envio {
+            @extend %rowBetween;
+            align-items: center;
+
+            p {
+                @extend %p09;
+                font-weight: 300;
+            }
+
+            span {
+                @extend %tittle3;
+                font-weight: 500;
+            }
+        }
+
+        &-propina {
+            @extend %col;
+
+            &-top {
+                @extend %rowBetween;
+
+                p {
+                    @extend %p09;
+                    font-weight: 300;
+                }
+
+                a {
+                    @extend %rowAlignCenter;
+                    @extend %tittle3;
+                    column-gap: 0.5rem;
+                    font-weight: 500;
+                    text-decoration: none;
+
+                    img {
+                        height: 1rem;
+                    }
+                }
+            }
+
+            span {
+                @extend %p07;
+            }
+
+        }
+    }
+
+    &__total {
+        @extend %rowBetween;
+        align-items: center;
+
+        h2 {
+            font-size: clamp(2.3rem, 3.2vw, 3.2rem)
+        }
+
+        &-right {
+            @extend %colCenter;
+
+            p {
+                @extend %tittle;
+                font-weight: 600;
+            }
+
+            span {
+                @extend %tittle3;
+                color: $green-400;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .reestrenaruwu {
+        @extend %marginTop2;
+        @extend %transition;
+        @extend %shadowButton;
+        @extend %border__radius;
+        @extend %tittle3;
+        @extend %rowBetween;
+        background-color: $green-400;
+        padding: 0.7rem clamp(1.5rem, 2.5vw, 2.5rem);
+        text-decoration: none;
+        font-weight: 500;
+        color: $general-white;
+        max-width: 30rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .reestrenaruwu:hover {
+        @extend %shadowButtonHover;
+    }
+}

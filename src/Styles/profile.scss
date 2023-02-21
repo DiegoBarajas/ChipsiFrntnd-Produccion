@@ -1,0 +1,195 @@
+@import './var.scss';
+
+.profile {
+    width: 100%;
+    min-height: 100vh;
+
+    #profile__container {
+        padding: 0px 1rem;
+        margin-top: 5rem;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        @extend %border__radius;
+        padding: 1rem;
+        margin-bottom: 2rem;
+
+        &__personal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 0.3rem;
+            margin-bottom: 2rem;
+
+            img {
+                height: 5rem;
+                clip-path: circle();
+            }
+
+            &-name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 0.3rem;
+
+                p {
+                    font-size: 1.1rem;
+                    color: #232a28;
+                    text-align: center
+                }
+
+                a {
+                    font-size: 1.15rem;
+                    transition: color 0.3s ease-in-out;
+                    -webkit-transition: color 0.3s ease-in-out;
+                    -moz-transition: color 0.3s ease-in-out;
+                    -ms-transition: color 0.3s ease-in-out;
+                    -o-transition: color 0.3s ease-in-out;
+                    color: $green-300;
+                    text-decoration: none;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 2vw;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                color: #232a28;
+                text-decoration: none;
+                align-items: center;
+                padding: 1rem 0px;
+                @extend %transition;
+                @extend %border__radius;
+
+                img {
+                    height: 1.5rem;
+                }
+
+                span {
+                    font-size: 1.1rem;
+                }
+
+            }
+
+            &-item:hover {
+                background-color: #F2F7F6;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 1rem;
+        @extend %border__radius;
+        row-gap: 1.5rem;
+        margin-bottom: 2rem;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.3rem;
+
+            span {
+                font-size: 1.1rem;
+                opacity: 0.7;
+            }
+
+            input {
+                padding: 0.5rem 0px;
+                font-size: 1.1rem;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #F2F7F6;
+            }
+        }
+
+        button {
+            display: block;
+            height: 2.7rem;
+            width: 100%;
+            max-width: 250px;
+            background-color: $green-300;
+            border: none;
+            outline: none;
+            color: #F2F7F6;
+            font-size: 1.2rem;
+            border-radius: 0.3rem;
+            -webkit-border-radius: 0.3rem;
+            -moz-border-radius: 0.3rem;
+            -ms-border-radius: 0.3rem;
+            -o-border-radius: 0.3rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            -webkit-transition: background-color 0.3s ease-in-out;
+            -moz-transition: background-color 0.3s ease-in-out;
+            -ms-transition: background-color 0.3s ease-in-out;
+            -o-transition: background-color 0.3s ease-in-out;
+            max-width: none;
+        }
+
+        button:hover {
+            background-color: $green-200;
+        }
+    }
+
+    &__bad {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1rem;
+        background-color: #ffffff;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        @extend %border__radius;
+
+        button {
+            max-width: 300px;
+            min-width: 150px;
+            width: 100%;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            font-size: 1.2rem;
+            text-align: center;
+            cursor: pointer;
+            color: #b82e2e;
+            @extend %transition;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .profile {
+        #profile__container {
+            padding: 0px 5rem;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .profile {
+        #profile__container {
+            padding: 0px 12rem;
+        }
+    }
+}

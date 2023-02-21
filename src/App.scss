@@ -1,0 +1,51 @@
+@import "./Styles/var.scss";
+
+* {
+  font-family: "OutfitVar", Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  word-break: keep-all;
+  color: $general-text;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  will-change: transform;
+}
+
+#root {
+  height: 100%;
+}
+
+html {
+  height: $general-vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: $general-vh;
+  position: relative;
+  padding: 1rem clamp(0.5rem, 8vw, 8rem);
+  background-color: #F9FCFB;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

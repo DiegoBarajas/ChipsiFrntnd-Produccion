@@ -1,0 +1,137 @@
+@import "./var.scss";
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffffff;
+  min-height: 100vh;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      height: 2rem;
+    }
+  }
+
+  h2 {
+    @extend %tittle2;
+    text-align: center;
+    margin: 1rem auto 0.5rem auto
+  }
+
+  p {
+    @extend %p09;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    margin: 0px auto 2rem auto;
+
+    a {
+      font-size: 1.15rem;
+      transition: color 0.3s ease-in-out;
+      -webkit-transition: color 0.3s ease-in-out;
+      -moz-transition: color 0.3s ease-in-out;
+      -ms-transition: color 0.3s ease-in-out;
+      -o-transition: color 0.3s ease-in-out;
+      color: $green-300;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $green-200;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    width: 100%;
+
+    input {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      height: 2.5rem;
+      border: none;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      background-color: #F2F7F6;
+      font-size: 1.1rem;
+      outline: none;
+      padding: 0px 10px;
+      border-radius: 0.3rem;
+      -webkit-border-radius: 0.3rem;
+      -moz-border-radius: 0.3rem;
+      -ms-border-radius: 0.3rem;
+      -o-border-radius: 0.3rem;
+      color: #232a28;
+      transition: border 0.3s ease-in-out;
+      -webkit-transition: border 0.3s ease-in-out;
+      -moz-transition: border 0.3s ease-in-out;
+      -ms-transition: border 0.3s ease-in-out;
+      -o-transition: border 0.3s ease-in-out;
+    }
+
+    input:focus {
+      border-bottom-color: $green-300;
+    }
+
+    button {
+      display: block;
+      height: 2.5rem;
+      width: 100%;
+      max-width: 300px;
+      background-color: $green-300;
+      border: none;
+      outline: none;
+      color: #232a28;
+      font-size: 1.2rem;
+      border-radius: 0.3rem;
+      -webkit-border-radius: 0.3rem;
+      -moz-border-radius: 0.3rem;
+      -ms-border-radius: 0.3rem;
+      -o-border-radius: 0.3rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      -webkit-transition: background-color 0.3s ease-in-out;
+      -moz-transition: background-color 0.3s ease-in-out;
+      -ms-transition: background-color 0.3s ease-in-out;
+      -o-transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: $green-200;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    row-gap: 1rem;
+
+    a {
+      font-size: 1.15rem;
+      transition: color 0.3s ease-in-out;
+      -webkit-transition: color 0.3s ease-in-out;
+      -moz-transition: color 0.3s ease-in-out;
+      -ms-transition: color 0.3s ease-in-out;
+      -o-transition: color 0.3s ease-in-out;
+      color: $green-300;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    a:hover {
+      color: $green-200;
+    }
+  }
+}

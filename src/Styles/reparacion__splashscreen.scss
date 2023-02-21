@@ -1,0 +1,24 @@
+@import "./var.scss";
+
+.splashscreen {
+    @extend %colCenter;
+    user-select: none;
+    row-gap: 0.5rem;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    img {
+        height: 4rem;
+    }
+
+    span {
+        @extend %p08;
+        opacity: 0.8;
+    }
+
+    p {
+        @extend %p09;
+        text-align: center;
+    }
+}

@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-Black.woff2") format("woff2"),
+    url("../Fonts/Outfit-Black.woff") format("woff");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-ExtraBold.woff2") format("woff2"),
+    url("../Fonts/Outfit-ExtraBold.woff") format("woff");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-Bold.woff2") format("woff2"),
+    url("../Fonts/Outfit-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-SemiBold.woff2") format("woff2"),
+    url("../Fonts/Outfit-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-Medium.woff2") format("woff2"),
+    url("../Fonts/Outfit-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-Regular.woff2") format("woff2"),
+    url("../Fonts/Outfit-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-Light.woff2") format("woff2"),
+    url("../Fonts/Outfit-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-ExtraLight.woff2") format("woff2"),
+    url("../Fonts/Outfit-ExtraLight.woff") format("woff");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "OutfitVar";
+  src: url("../Fonts/Outfit-Thin.woff2") format("woff2"),
+    url("../Fonts/Outfit-Thin.woff") format("woff");
+  font-weight: 100;
+}
+
+/* Green Major */
+$green-100: #f2f7f6;
+$green-200: #8ce6cd;
+$green-300: #5bdcb7;
+$green-400: #14cc98;
+$green-500: #007a57;
+$green-600: #2e413c;
+$green-700: #232a28;
+$green-transparent: #DEFAF3;
+
+/* Purple Triad */
+$purple-100: #f6f2f7;
+$purple-200: #da8ce6;
+$purple-300: #d57ce3;
+$purple-400: #c158d1;
+$purple-500: #533e57;
+$purple-600: #3e2e41;
+$purple-700: #29232a;
+
+/* Orange Complementary */
+$orange-100: #f7f3f2;
+$orange-200: #e69f8c;
+$orange-300: #dc775b;
+$orange-400: #db6c4d;
+$orange-500: #7a1a00;
+$orange-600: #41322e;
+$orange-700: #2a2523;
+
+/* General */
+$red: #DC5B5B;
+$red-transparent: #F5E6E6;
+$general-white: #fff;
+$general-text: #2e413c;
+$general-vh: calc(var(--vh, 1vh) * 100);
+
+
+/* Effects */
+
+%transition {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+%transition2 {
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+/* Styles */
+
+%border {
+  border-radius: clamp(15px, 4vw, 20px);
+  -webkit-border-radius: clamp(15px, 4vw, 20px);
+  -moz-border-radius: clamp(15px, 4vw, 20px);
+  -ms-border-radius: clamp(15px, 4vw, 20px);
+  -o-border-radius: clamp(15px, 4vw, 20px);
+}
+
+%border__radius {
+  border-radius: clamp(20px, 4vw, 25px);
+  -webkit-border-radius: clamp(20px, 4vw, 25px);
+  -moz-border-radius: clamp(20px, 4vw, 25px);
+  -ms-border-radius: clamp(20px, 4vw, 25px);
+  -o-border-radius: clamp(20px, 4vw, 25px);
+}
+
+%shadow {
+   box-shadow: 4px 4px 5px rgba(161, 198, 190, 0.07);
+}
+
+%shadow__white {
+  box-shadow: 4px 4px 10px rgba(161, 198, 190, 0.15);
+}
+
+%shadow__invert {
+  box-shadow: -4px -4px 5px rgba(161, 198, 190, 0.07);
+}
+
+%shadowButton {
+  box-shadow: 4px 4px 10px rgba(91, 220, 183, 0.5);
+}
+
+%shadowButtonHover {
+  box-shadow: 4px 4px 15px rgba(91, 220, 183, 0.9);
+}
+
+%shadowHover {
+  box-shadow: 2px 2px 20px 3px rgba($color: $green-700, $alpha: 0.07);
+}
+
+%tittle {
+  font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+}
+
+%tittle2 {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+%tittle3 {
+  font-size: clamp(1.1rem, 1.7vw, 1.7rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+%textGradient {
+  background: linear-gradient(90.28deg, #14CC98 7.24%, #5BDCB7 94.76%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+%rowBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+%colCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+%rowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+%rowAlignCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+%row {
+  display: flex;
+  flex-direction: row;
+}
+
+%col {
+  display: flex;
+  flex-direction: column;
+}
+
+%p07 {
+  font-size: clamp(0.7rem, 1.1vw, 1.1rem);
+  font-weight: 300;
+}
+
+%p08 {
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+}
+
+%p09 {
+  font-size: clamp(0.9rem, 1.5vw, 1.4rem);
+}
+
+%backgroundCenter {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%objectCenter {
+  object-fit: cover;
+  object-position: center;
+  -o-object-fit: cover;
+  -o-object-position: center;
+}
+
+%lineGradientLeft {
+  background-image: linear-gradient(0.25turn,
+      rgba(91, 220, 183, 0),
+      rgba(91, 220, 183, 1));
+}
+
+%lineGradientRight {
+  background-image: linear-gradient(0.25turn,
+      rgba(91, 220, 183, 1),
+      rgba(91, 220, 183, 0));
+}
+
+%colGap1 {
+  column-gap: 1rem;
+}
+
+%rowGap1 {
+  row-gap: 1rem;
+}
+
+%gap1 {
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+%marginTop2 {
+  margin-top: clamp(2rem, 4vw, 4rem);
+}
+
+%marginTop1 {
+  margin-top: 1rem;
+}
+
+%marginTop5 {
+  margin-top: clamp(5rem, 10vw, 10rem);
+}

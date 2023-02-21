@@ -1,0 +1,65 @@
+@import "./var.scss";
+
+.repair__device {
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &-arrow {
+            height: clamp(1rem, 2vw, 2rem);
+
+            &-img {
+                height: 100%;
+            }
+        }
+
+        &-location {
+            display: flex;
+            flex-direction: row;
+            column-gap: 0.5rem;
+            align-items: center;
+            text-decoration: none;
+            max-width: 70%;
+
+            &-img {
+                height: clamp(0.8rem, 1.5vw, 1.5rem);
+            }
+
+            &-span {
+                font-size: 1rem;
+                font-weight: 400;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            &-button {
+                height: clamp(0.8rem, 1.5vw, 1.5rem);
+            }
+        }
+    }
+
+    &__tittle {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        &-h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        &-span {
+            color: $green-300;
+            font-size: 1rem;
+            font-weight: 400;
+
+            &-step {
+                font-weight: 700;
+                color: $green-300;
+            }
+        }
+    }
+}
