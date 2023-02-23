@@ -41,6 +41,12 @@ const Notificar = () => {
                 alert('Ha ocurrido un error al conectar con el servidor');
             })
         
+        if(data.whatsapp){
+            alert('El whatsapp se envio exitosamente');
+        }else{
+            alert('Hubo un error al mandar el whatsapp, intentalo de nuevo');
+        }
+
         if(data.email){
             alert('El correo se envio exitosamente');
         }else{
