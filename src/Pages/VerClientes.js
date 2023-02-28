@@ -35,7 +35,9 @@ const VerClientes = () => {
                             <p>{c.problema} </p>
                             <p>{c.correo} </p>
                             <p>{c.telefono} </p>
-                            <p>{c.direccion} a las {c.rango} </p>
+                            <p>{c.direccion} {c.rango} </p>
+                            <p>${c.precio} MXN</p>
+
                             <p>{c.createdAt} </p>
 
                             <hr/><br/>

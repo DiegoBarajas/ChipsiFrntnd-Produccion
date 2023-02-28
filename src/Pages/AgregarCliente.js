@@ -15,7 +15,8 @@ const AgregarCliente = () => {
         const dispositivo = document.getElementById('dispositivo').value;
         const problema = document.getElementById('problema').value;
         const direccion = document.getElementById('direccion').value;
-        const rango = document.getElementById('rango').value;
+        const rango = 'De '+document.getElementById('rango1').value +' a '+document.getElementById('rango2').value;
+        const precio = document.getElementById('precio').value;
 
 
         const formData = new FormData();
@@ -27,6 +28,7 @@ const AgregarCliente = () => {
         formData.append('problema', problema);
         formData.append('direccion', direccion);
         formData.append('rango', rango);
+        formData.append('precio', precio);
 
         const {data} = await axios.post(backend()+'/api/clientes/', formData)
             .catch((err)=>{
@@ -37,13 +39,15 @@ const AgregarCliente = () => {
         if(data._id !== undefined){
             alert('El cliente se registró exitosamente');
 
-             document.getElementById('nombre').value = '';
-             document.getElementById('correo').value = '';
-             document.getElementById('telefono').value = '';
-             document.getElementById('dispositivo').value = '';
-             document.getElementById('problema').value = '';
-             document.getElementById('direccion').value = '';
-            document.getElementById('rango').value = '';
+            document.getElementById('nombre').value = '';
+            document.getElementById('correo').value = '';
+            document.getElementById('telefono').value = '';
+            document.getElementById('dispositivo').value = '';
+            document.getElementById('problema').value = '';
+            document.getElementById('direccion').value = '';
+            document.getElementById('rango1').value = '';
+            document.getElementById('rango2').value = '';
+            document.getElementById('precio').value = '';
 
             window.location.href = '/notificar/'+data._id
         }else{
@@ -115,13 +119,29 @@ const AgregarCliente = () => {
                     required
                 /><br/>
                 
-                <label>Rango</label>
+                <label>Rango de horas</label><br/>
+                <label> De: </label>
                 <input
-                    type='text'
+                    type='time'
                     placeholder='rango'
-                    id='rango'
+                    id='rango1'
+                    required
+                />
+                <label> a: </label>
+                <input
+                    type='time'
+                    placeholder='rango'
+                    id='rango2'
                     required
                 /><br/>
+
+                <label>Precio $</label>
+                <input
+                    type='number'
+                    placeholder='Precio MXN'
+                    id='precio'
+                    required
+                /><br/> 
 
                 <button>Enviar</button>
             </form>
